@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Product Page</title>
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* You can add custom styles here */
+    </style>
+  </head>
+
+  <body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gray-900 text-white py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold">Gadget Store</a>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="hover:text-gray-300">Home</a></li>
+          <li><a href="#" class="hover:text-gray-300">Products</a></li>
+          <li><a href="#" class="hover:text-gray-300">About</a></li>
+          <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Product Details Section -->
+    <section class="product-details py-20">
+      <div
+        class="container mx-auto flex flex-col lg:flex-row items-center justify-between"
+      >
+        <div class="w-full lg:w-1/2">
+          <img
+            src="https://via.placeholder.com/400"
+            alt="Product"
+            class="mx-auto"
+            width="400"
+          />
+        </div>
+        <div class="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-12">
+          <h2 class="text-4xl font-bold mb-4">Product Name</h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Product description goes here. Highlight the features and benefits
+            of the product.
+          </p>
+          <div class="mb-6">
+            <span class="text-2xl font-bold text-green-500">$199</span>
+            <span class="text-gray-500 ml-2">/ Piece</span>
+          </div>
+          <p class="mb-6">
+            Available Colors:
+            <span
+              class="inline-block w-4 h-4 rounded-full bg-blue-500 ml-2"
+            ></span>
+            <span
+              class="inline-block w-4 h-4 rounded-full bg-red-500 ml-2"
+            ></span>
+            <span
+              class="inline-block w-4 h-4 rounded-full bg-yellow-500 ml-2"
+            ></span>
+          </p>
+          <div class="flex space-x-4 mb-6">
+            <button
+              class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold text-lg hover:bg-blue-700 transition duration-300"
+            >
+              Buy Now
+            </button>
+            <button
+              class="border border-gray-300 px-4 py-2 rounded-full font-semibold text-lg hover:bg-gray-200 transition duration-300"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <p class="text-sm text-gray-500">Free shipping on orders over $50</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Features Section -->
+    <section class="product-features py-20 bg-gray-200">
+      <div class="container mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-10 text-center">
+          Key Features
+        </h2>
+        <ul class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <li class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-3">Feature 1</h3>
+            <p class="text-gray-600">Description of feature 1.</p>
+          </li>
+          <li class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-3">Feature 2</h3>
+            <p class="text-gray-600">Description of feature 2.</p>
+          </li>
+          <li class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-3">Feature 3</h3>
+            <p class="text-gray-600">Description of feature 3.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2023 Gadget Store. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
