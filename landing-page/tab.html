@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs Component</title>
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* You can add custom styles here */
+      .tab-content {
+        background-color: #f3f4f6;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-6">
+      <div class="flex space-x-4">
+        <button onclick="openTab(event, 'tab1')" class="tab-btn active">
+          Tab 1
+        </button>
+        <button onclick="openTab(event, 'tab2')" class="tab-btn">Tab 2</button>
+        <button onclick="openTab(event, 'tab3')" class="tab-btn">Tab 3</button>
+      </div>
+      <div id="tab1" class="tab-content active p-8 mt-4 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Product Overview</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ex
+          sit amet augue sodales accumsan in sed arcu.
+        </p>
+        <p class="mt-4">
+          Nullam facilisis, velit ac eleifend volutpat, mauris risus interdum
+          nulla, at rhoncus libero elit vel nulla.
+        </p>
+      </div>
+      <div id="tab2" class="tab-content hidden p-8 mt-4 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Features</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ex
+          sit amet augue sodales accumsan in sed arcu.
+        </p>
+        <ul class="list-disc mt-4">
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+        </ul>
+      </div>
+      <div id="tab3" class="tab-content hidden p-8 mt-4 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Customer Reviews</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ex
+          sit amet augue sodales accumsan in sed arcu.
+        </p>
+        <p class="mt-4">
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia Curae; Integer in ex ac elit dignissim vehicula non
+          nec tellus.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName('tab-content');
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].classList.add('hidden');
+        }
+        tablinks = document.getElementsByClassName('tab-btn');
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove('active');
+        }
+        document.getElementById(tabName).classList.remove('hidden');
+        evt.currentTarget.classList.add('active');
+      }
+    </script>
+  </body>
+</html>
